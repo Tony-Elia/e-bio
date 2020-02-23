@@ -1,0 +1,131 @@
+body {
+  margin-top: 60px;
+}
+
+header {
+  display: flex;
+  flex: auto;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.header-img {
+  position: absolute;
+  margin-bottom: auto;
+}
+
+.over-text {
+  position: absolute;
+  color: white;
+  font-size: 20pt;
+  padding: 0.2em 0.5em;
+  background: linear-gradient(to right, #05f7f2bf 0%, #41dc0dc9 100%);
+  margin-top: 24%;
+  left: 50%;
+  transform: translate(-50%);
+  animation-name: opening;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+}
+
+.anim {
+  font-size: 20pt;
+  animation-name: text-anim;
+  animation-duration: 1.7s;
+  animation-timing-function: linear;
+}
+
+@keyframes opening {
+  0% {opacity: 0; height: 0px; width: 0px;}
+  50% {opacity: 0; height: 0px; width: 0px;}
+  70% {width: 228px; height: 0px; opacity: 1;}
+  100% {width: 228px; height: 51px; opacity: 1;}
+}
+
+@keyframes text-anim {
+  0% {opacity: 0; display: none;}
+  80% {opacity: 0; display: none;}
+  100% {opacity: 1; display: inline-block;}
+}
+
+nav {
+  background: linear-gradient(to bottom, white 80%, #ffffff00 100%);
+}
+
+.nav-logo {
+  position: absolute;
+  top: 0px;
+  left: 2rem;
+  z-index: 999;
+  width: 140px;
+  border-radius: 50%;
+}
+
+@media (max-width: 576px) {
+  .nav-logo {
+    width: 120px;
+    z-index: 0;
+  }
+  .nav-item {
+    z-index: 9;
+    background-color: white;
+  }
+  .sub-logo {
+    margin:0px 1.5em;
+  }
+}
+
+.small-border {
+  border-right: 1px solid black;
+  margin: 0px 0.2em;
+  height: 20px;
+}
+
+.active {
+  background-color: #afffe0;
+  border-radius: 7px;
+}
+
+.row-header {
+  margin: 0px auto;
+  padding: 0px auto;
+}
+
+.container {
+  margin-bottom: 15px;
+}
+
+.row-content {
+  margin: 0px auto;
+  min-height: 400px;
+}
+
+.first-row {
+  margin-top: 60%;
+}
+
+.sub-logo {
+  width: 120px;
+  border-radius: 50%;
+  border: 10px solid #00cef1;
+  transform: translateY(25px);
+}
+
+
+.sub-text {
+  color: floralWhite;
+  border: 3px solid #00cef1;
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 0.5em;
+  background-color: #00cef1;
+}
+
+.jumbotron {
+  background: none;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 18pt;
+  background-color: #ff6f61;
+  padding: 1em 1em;
+}
