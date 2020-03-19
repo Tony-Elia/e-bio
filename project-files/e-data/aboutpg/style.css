@@ -1,0 +1,285 @@
+:root {
+  --livingcoral: #ff6f61;
+  --sideBg: #407899;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5d5d5d;
+  border-radius: 10px;
+}
+
+body {
+  margin-top: 60px;
+  overflow-x: hidden;
+  font-family: 'Quicksand';
+  padding: 0;
+}
+
+nav {
+  max-height: 75px;
+  background: linear-gradient(to bottom, white 80%, #ffffff00 100%);
+}
+
+.nav-logo {
+  position: absolute;
+  top: 15px;
+  left: 2rem;
+  width: 110px;
+  border-radius: 50%;
+  border: 5px solid #f4f3eee0;
+  z-index: 9;
+}
+
+.header {
+  position: relative;
+}
+
+.img-header {
+  position: relative;
+  width: 100%;
+  z-index: 0;
+}
+
+.header-text {
+  position: absolute;
+  z-index: 9;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background: #06b6c766;
+  color: floralWhite;
+  padding: 0.5em;
+  text-align: center;
+  font-variant: small-caps;
+  font-weight: 700;
+  font-size: 20pt;
+}
+
+.footer-logo {
+  width: 90px;
+  border-radius: 50%;
+  border: 3px solid #dadada;
+}
+
+
+/*in small screens*/
+@media (max-width: 575px) {
+  p {
+    font-size: 10pt;
+  }
+  .text-xs {
+    font-size: 10pt;
+  }
+  .header-text {
+    top: 25%;
+    font-size: 15pt;
+  }
+  .bg-info {
+    line-height: 1.6;
+  }
+  .nav-logo {
+    width: 90px;
+    top: 15px;
+    left: 1rem;
+    z-index: 0;
+  }
+  .footer-logo {
+    width: 70px
+  }
+  .nav-item {
+    padding: 0px 16px;
+    background-color: white;
+  }
+  nav {
+    padding-top: 10px;
+    max-height: 55px;
+  }
+  body {
+    margin-top: 45px;
+  }
+  .nav-toggler {
+    margin-bottom: 20px;
+  }
+  #Navbar {
+    background-color: white;
+    z-index: 9;
+    box-shadow: 0px 20px 8px 20px white;
+    max-height: 125px;
+  } #sideBar {
+    padding-top: 90px;
+  }
+}
+
+.small-border {
+  border-right: 1px solid black;
+  margin: 0px 0.2em;
+  height: 20px;
+}
+
+.active {
+  background-color: #afffe0;
+  border-radius: 7px;
+}
+
+.row-header {
+  margin: 0px auto;
+  padding: 0px auto;
+}
+
+.row-content {
+  margin: 0px auto;
+  min-height: 400px;
+}
+
+.nav-item:hover {
+  border-radius: 7px;
+  background-color: #afffe0;
+  transition: 0.5s;
+}
+
+#toggler-arrow {
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  color: white;
+  background-color: var(--sideBg);
+  width: 30px;
+  z-index: 99;
+  cursor: pointer;
+  transition: 0.25s;
+  animation-name: popup;
+  animation-duration: 1s;
+}
+
+#ar:hover {
+  transform: translateX(5px);
+}
+
+@keyframes popup {
+  0% {
+    left: -30px;
+  } 40% {
+    left: -30px;
+  } 100% {
+    left: 0px;
+  }
+}
+
+#ar {
+  transition: 0.25s;
+}
+
+.rotate {
+  animation: rotate 0.25s;
+  animation-delay: 0.25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotate {
+    from {
+      transform: rotate(0);
+    } to {
+      transform: rotate(180deg);
+    }
+}
+
+.side-bar {
+  top: 0;
+  left: -270px;
+  position: fixed;
+  height: 100%;
+  width: 270px;
+  z-index: 999;
+  background-color: var(--sideBg);
+  transition: 0.25s;
+  color: floralWhite;
+  padding-top: 120px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-bottom: 5em;
+}
+
+.side-head {
+  padding: 30px 30px;
+  font-size: 20pt;
+  font-family: 'Raleway';
+  margin-bottom: 2em;
+}
+
+
+.side-btn {
+  color: white;
+  text-align: left;
+  border-radius: 0px;
+  background-color: var(--sideBg);
+}
+
+.side-btn:hover {
+  background-color: #8CAEC1;
+}
+
+.btn-primary:hover {
+  background-color: white;
+  color: #007bff;
+
+}
+
+footer {
+  padding: 40px 16px;
+  background-color: #F4F3EE;
+  line-height: 30px;
+}
+
+.designed-by {
+  margin-top: 15px;
+  border: 2px dashed #dadada;
+  padding: 0.5em;
+}
+
+.sideBar-primary {
+  width: 220px;
+}
+
+.sideBar-secondary {
+  width: 240px;
+  margin-left: 30px;
+  border-left: 3px solid #345d75;
+}
+
+.sideBar-fisrt-secondary {
+  width: 200px;
+  margin-left: 20px;
+  border-left: 3px solid #345d75;
+}
+
+#subHeader {
+  font-size: 12pt;
+  padding-left: 42px;
+}
+
+.close {
+  padding-top: 0px;
+  color: floralWhite;
+  margin-right: 1.5em;
+  transform: translateY(-30px);
+}
+
+.close:hover {
+  color: floralWhite;
+}
+
+.bg-info {
+  color: white;
+}
