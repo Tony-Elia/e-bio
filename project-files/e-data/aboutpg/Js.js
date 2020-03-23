@@ -28,3 +28,36 @@ elementsArray.forEach(function(elem) {
     }
     });
 });
+
+const bar1 = document.querySelector(".bar1");
+const bar2 = document.querySelector(".bar2");
+const bar3 = document.querySelector(".bar3");
+const bars = document.querySelector(".bars");
+const navigationBar = document.querySelector("#Navbar");
+var toggle = false;
+
+
+bars.addEventListener("click", function () {
+
+  navigationBar.classList.toggle("curtain");
+  if (toggle == false) {
+
+    bar1.style.transform = "rotate(45deg)";
+    bar1.style.transform += "translateY(5px)";
+    bar1.style.transform += "translateX(5px)";
+
+    bar2.style.borderColor = "white";
+
+    bar3.style.transform = "rotate(-45deg)";
+    bar3.style.transform += "translateY(-5px)";
+    bar3.style.transform += "translateX(5px)";
+
+    toggle = true;
+  } else {
+    bar1.style.transform = "rotate(0deg)";
+    bar2.style.borderColor = "black";
+    bar3.style.transform = "rotate(0deg)";
+    toggle = false;
+  }
+
+});

@@ -24,21 +24,30 @@ body {
   overflow-x: hidden;
   font-family: 'Quicksand';
   padding: 0;
+  z-index: -1;
+}
+
+.navbar {
+  padding: .3rem 0.5rem;
 }
 
 nav {
-  max-height: 75px;
-  background: linear-gradient(to bottom, white 80%, #ffffff00 100%);
+  height: 60px;
+  background-color: white;
+  box-shadow: 0px 25px 13px -29px black;
 }
 
-.nav-logo {
-  position: absolute;
-  top: 15px;
-  left: 2rem;
-  width: 110px;
-  border-radius: 50%;
-  border: 5px solid #f4f3eee0;
-  z-index: 9;
+.navbar-brand div{
+  margin-bottom: 0.5rem;
+  color: red;
+  font-weight: 700;
+  font-family: cursive;
+  font-size: 1.5rem;
+}
+
+#logo-svg {
+  width: 100px;
+  height: 40px;
 }
 
 .header {
@@ -53,17 +62,17 @@ nav {
 
 .header-text {
   position: absolute;
-  z-index: 9;
   top: 35%;
   left: 50%;
+  font-family: sans-serif;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
   transform: translate(-50%, 50%);
-  background: #06b6c766;
   color: floralWhite;
-  padding: 0.5em;
   text-align: center;
   font-variant: small-caps;
-  font-weight: 700;
-  font-size: 20pt;
+  font-weight: 900;
+  font-size: 25pt;
 }
 
 .footer-logo {
@@ -72,9 +81,171 @@ nav {
   border: 3px solid #dadada;
 }
 
+.sideBar-fisrt-secondary {
+  width: 200px;
+  margin-left: 20px;
+  border-left: 3px solid #345d75;
+}
+
+.sideBar-secondary {
+  width: 240px;
+  margin-left: 30px;
+  border-left: 3px solid #345d75;
+}
 
 /*in small screens*/
 @media (max-width: 575px) {
+  body {
+    margin-top: 40px;
+    overflow-x: hidden;
+  }
+  .bar1 {
+    display: flex;
+    width: 20px;
+    border: 1px solid black;
+    padding: 0;
+    margin: 0.32rem 0;
+    transition: 0.2s;
+  }
+  .bar2 {
+    display: flex;
+    width: 20px;
+    border: 1px solid black;
+    padding: 0;
+    margin: 0.32rem 0;
+    transition: 0.2s;
+  }
+  .bar3 {
+    display: flex;
+    width: 20px;
+    border: 1px solid black;
+    padding: 0;
+    margin: 0.32rem 0;
+    transition: 0.2s;
+  }
+  #logo-svg {
+    width: 90px;
+    height: 40px;
+  }
+  .navbar-toggler {
+    padding: 0rem .75rem .75rem 0rem;
+  }
+  nav {
+    height: 45px;
+    background-color: white;
+    box-shadow: 0px 13px 16px -20px black;
+  }
+  .fixed-top {
+    z-index: 9;
+  }
+  .bars {
+    z-index: 999;
+  }
+  #Navbar {
+    position: fixed;
+    z-index: -2;
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: block;
+    top: 0;
+    left: 0;
+    transition-delay: .5s;
+  }
+  #Navbar {
+    position: fixed;
+    z-index: -2;
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: block;
+    top: 0;
+    left: 0;
+    transition-delay: .5s;
+  }
+  #Navbar.curtain {
+    z-index: 9;
+    transition-delay: 0s;
+  }
+  #Navbar span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200%;
+    height: 100%;
+    display: block;
+    transform-origin: top right;
+    transition: 0.5s;
+  }
+  #Navbar span:nth-child(1) {
+    background-color: yellow;
+    transform: rotate(-90deg);
+    transition-delay: 0.2s;
+  }
+  #Navbar span:nth-child(2) {
+    background-color: blue;
+    transform: rotate(-90deg);
+    transition-delay: 0.1s;
+  }
+  #Navbar span:nth-child(3) {
+    background-color: var(--livingcoral);
+    transform: rotate(-90deg);
+    transition-delay: 0s;
+  }
+  #Navbar.curtain span:nth-child(1) {
+    transform: rotate(0deg);
+    transition-delay: 0s;
+  }
+  #Navbar.curtain span:nth-child(2) {
+    transform: rotate(0deg);
+    transition-delay: 0.1s;
+  }
+  #Navbar.curtain span:nth-child(3) {
+    transform: rotate(0deg);
+    transition-delay: 0.2s;
+  }
+  #Navbar .scrollable {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    padding-top: 50%;
+    padding-bottom: 30px;
+    height: 0;
+    min-width: 100%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+  }
+  #Navbar.curtain .scrollable {
+    display: block;
+    visibility: visible;
+    top: 50%;
+    height: 100vh;
+    z-index: 100;
+    opacity: 1;
+    transition-delay: 0.7s;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  #Navbar a, #Navbar li, #Navbar button{
+    color: white;
+    margin: 0.5em 1em;
+    padding: 0.5em;
+    background: transparent;
+  }
+  .sideBar-fisrt-secondary {
+    width: auto;
+    margin-left: 0;
+    border-left: 0;
+  }
+  .sideBar-secondary {
+    width: auto;
+    margin-left: 0;
+    border-left: 0;
+  }
   p {
     font-size: 10pt;
   }
@@ -83,7 +254,7 @@ nav {
   }
   .header-text {
     top: 25%;
-    font-size: 15pt;
+    width: 100%;
   }
   .bg-info {
     line-height: 1.6;
@@ -101,22 +272,7 @@ nav {
     padding: 0px 16px;
     background-color: white;
   }
-  nav {
-    padding-top: 10px;
-    max-height: 55px;
-  }
-  body {
-    margin-top: 45px;
-  }
-  .nav-toggler {
-    margin-bottom: 20px;
-  }
-  #Navbar {
-    background-color: white;
-    z-index: 9;
-    box-shadow: 0px 20px 8px 20px white;
-    max-height: 125px;
-  } #sideBar {
+  #sideBar {
     padding-top: 90px;
   }
 }
@@ -252,18 +408,6 @@ footer {
   width: 220px;
 }
 
-.sideBar-secondary {
-  width: 240px;
-  margin-left: 30px;
-  border-left: 3px solid #345d75;
-}
-
-.sideBar-fisrt-secondary {
-  width: 200px;
-  margin-left: 20px;
-  border-left: 3px solid #345d75;
-}
-
 #subHeader {
   font-size: 12pt;
   padding-left: 42px;
@@ -282,4 +426,35 @@ footer {
 
 .bg-info {
   color: white;
+}
+
+#virus {
+  animation: logo-anime 10s infinite;
+  transform-origin: 135px 27px;
+}
+
+@keyframes logo-anime {
+ 70% {
+   transform-origin: 135px 27px;
+   transform: rotate(720deg);
+ }
+ 80% {
+   transform: translateX(-115px) rotate(180deg);
+ }
+ 100% {
+   transform: translateX(0) rotate(360deg);
+ }
+}
+
+#text path {
+ animation: text-anime 10s infinite;
+}
+
+@keyframes text-anime {
+ 70% {
+   transform: translateX(0);
+ }
+ 80% {
+   transform: translateX(-115px);
+ }
 }
